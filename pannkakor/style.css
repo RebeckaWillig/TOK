@@ -1,13 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body{
   background-color: rgb(161 0 0 / 30%);
-  margin: 0;
 }
 
 #cover-img {
   display: block;
   margin-inline: auto;
 
-  width: 1280px;
+  width: 100%;
   max-width: 1280px;
   height: 500px;
   min-height: 500px;
@@ -18,15 +22,16 @@ body{
 }
 
 .content {
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin-inline: auto;
 
-  width: 1280px;
+  width: 100%;
   max-width: 1280px;
   padding: 48px 48px 64px 48px;
   gap: 24px;
   margin-bottom: 64px;
-  
+
   background-color: #FCFCFC;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
@@ -35,9 +40,8 @@ body{
 .description {
   display: flex;
   align-items: center;
-  
-  width: 1184px;
-  height: 54px;
+
+  width: 100%;
   padding: 16px;
   gap: 10px;
 
@@ -45,11 +49,12 @@ body{
   background-color: #EBEBEB;
 }
 
-.recipe_part {
+.recipe-part {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: left;
 
-  width: 1184px;
+  width: 100%;
   gap: 16px;
   box-sizing: border-box;
 }
@@ -59,6 +64,7 @@ body{
   font-style: bold;
   font-size: 28px;
   color: #A10000;
+  line-height: 38px;
 }
 
 .content h2 {
@@ -66,6 +72,7 @@ body{
   font-style: bold;
   font-size: 24px;
   color: black;
+  line-height: 33px;
 }
 
 .content p,
@@ -76,20 +83,30 @@ body{
   color: black;
 }
 
+.content p {
+  line-height: 22px;
+}
+
 .content li {
   line-height: 32px;
+}
+
+.content ul,
+.content ol {
+  list-style-position: inside;
+  padding-left: 12px;
 }
 
 .img-grid {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  width: 1184px;
+  width: 100%;
   height: 467px;
   gap: 24px;
 }
 
 .img-grid img {
-  width: 580px;
+  width: 100%;
   min-width: 300px;
   height: 467px;
   object-fit: cover;
